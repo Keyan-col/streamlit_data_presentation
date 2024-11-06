@@ -90,7 +90,7 @@ if not st.session_state.authenticated:
                 st.session_state.video_data = restructure_data(
                     raw_data['data'])
                 st.session_state.authenticated = True
-                st.experimental_rerun()  # 重新运行以更新界面
+                st.rerun()  # 重新运行以更新界面
             else:
                 st.error("获取数据失败")
         else:
